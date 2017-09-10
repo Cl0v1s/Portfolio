@@ -1,0 +1,221 @@
+@import 'chart';
+
+.invisible
+{
+  display: none !important;
+}
+
+div#app
+{
+  min-height:100%;
+}
+
+
+
+@keyframes loading {
+    0%   {left: -300px; background-color: $color-front-peach;}
+    50% { left: 150%; background-color: $color-front-straw;}
+    100% {left: -300px; background-color: $color-front-peach;}
+}
+
+
+div#loading
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(50,50,50,0.5);
+
+  &:before{
+      content : "";
+      display: block;
+      width: 300px;
+      height: 3px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      
+      background-color: $color-front-peach;
+      
+      animation: loading 2s infinite;
+
+  }
+}
+
+div#popup
+{
+  box-sizing: border-box;
+  position: fixed;
+  min-width: 320px;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-back-primary;
+  border-radius: 2px;
+  z-index: 1;
+  border: 1px solid $color-front-peach;
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
+  padding: $space-normal;
+  padding-top: $space-big+$space-normal;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 90%;
+
+  &::after
+  {
+    position: absolute;
+    box-sizing: border-box;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    content: attr(data-name);
+    font-family: $font-primary;
+    padding: $space-small;
+    font-size: $font-size-big;
+    background-color: $color-front-peach;
+    color: $color-back-primary;
+  }
+
+  div.close
+  {
+      content: "🞩";
+      display: inline-block;
+      position: absolute;
+      z-index : 2;
+      display: inline-block;
+      top: 0;
+      right: 0;
+      font-size: $font-size-big;
+      text-align: right;
+      padding-top: $space-small;
+      padding-right: $space-small;
+      color: $color-back-primary;
+      cursor: pointer;
+  }
+}
+
+div#hidder
+{
+  position: fixed;
+  top: 0;
+  left : 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(black, 0.3);
+}
+
+h1
+{
+  font-size: $font-size-big;
+  font-family: $font-secondary;
+  margin-bottom: $space-normal;
+  //background-color: $color-front-straw;
+
+  //color: $color-back-primary;
+  padding: $space-small;
+  padding-left: 0;
+}
+
+h2
+{
+  font-family: $font-secondary;
+  font-size: $font-size-big;
+  margin-bottom: $space-normal;
+}
+
+section
+{
+  border-bottom: 2px dotted $color-front-straw;
+  margin-bottom: $space-normal;
+}
+
+table
+{
+  table-layout: fixed;
+  width: 100%;
+
+  tr
+  {
+    border-bottom: 1px dotted black;
+  }
+
+  &.dark
+  {
+    tr
+    {
+      border-bottom: 1px dotted white;
+    }
+
+    a
+    { color: $color-text-secondary;}
+  }
+
+
+  tr:last-of-type
+  {
+    border:0;
+  }
+
+  td
+  {
+    font-family: $font-primary;
+    padding: $space-small;
+  }
+
+  td:last-of-type
+  {
+    text-align: right;
+  }
+
+}
+
+img.profile
+{
+  $side: 75px;
+  border-radius: 100%;
+  width: $side;
+  height: $side;
+}
+
+.price
+{
+    $side: 50px;
+
+    display: inline-block;
+    position: relative;
+
+    width: $side;
+    height: $side;
+
+    background-color: $color-front-peach;
+
+    color: $color-back-primary;
+    border-radius: 100%;
+
+    line-height: $side;
+
+    text-align: center;
+
+    vertical-align: top;
+
+    margin-left: $space-small;
+}
+
+
+p
+{
+  font-family: $font-primary;
+}
+
+
+
+
+
+
+
+

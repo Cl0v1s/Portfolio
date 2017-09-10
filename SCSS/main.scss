@@ -1,0 +1,42 @@
+@import 'chart';
+@import 'reset';
+@import 'mixins';
+
+@import 'misc';
+
+
+
+/** Importation des styles des tags **/
+
+@import "tags/Header";
+
+@import "tags/Project/ProjectItem";
+@import "tags/Project/Projects";
+
+
+html, body
+{
+  height: 100%;
+  overflow-x: hidden;
+}
+
+*
+{
+  box-sizing: border-box;
+  font-size : $font-size-normal;
+  color: $color-text-primary;
+  font-family: $font-primary;
+  z-index :0;
+}
+
+div.vertical-center
+{
+  display: table;
+
+  &>*
+  {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+

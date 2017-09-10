@@ -1,0 +1,34 @@
+{
+  "name": "clovis-portron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "static/JS/main.js",
+  "scripts": {
+    "run": "concurrently 'superstatic' 'vogue'",
+    "build": "tsc --project TS && browserify static/JS/main.js --standalone app > static/JS/index.js && node-sass SCSS/main.scss static/CSS/main.css",
+    "docker": "",
+    "style" : "node-sass SCSS/main.scss static/CSS/main.css"
+  },
+  "author": "Clovis Portron",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "concurrently": "^3.5.0",
+    "riot-compiler": "^3.2.4",
+    "riotify": "^2.0.0",
+    "typescript": "^2.4.2"
+  },
+  "browserify": {
+    "transform": [
+      "riotify"
+    ]
+  },
+  "dependencies": {
+    "ajax-promise": "^0.8.1",
+    "js-cookie": "^2.1.4",
+    "md5": "^2.2.1",
+    "riot": "^3.6.3",
+    "riot-compiler": "^3.2.4",
+    "riot-route": "^3.1.2"
+  }
+}
