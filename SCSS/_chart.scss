@@ -8,7 +8,7 @@
 /////
 
 // Définition des polices
-$font-primary: 'Raleway';
+$font-primary: 'Raleway', sans-serif;
 $font-secondary: 'Lobster';
 
 $font-size-small: 14px;
@@ -16,14 +16,14 @@ $font-size-normal: 16px;
 $font-size-big : 20px;
 
 // Définition des couleurs
-$color-back-primary : #ffffff;
+$color-back-primary : #42424a;
 $color-back-secondary : #e3dfd6;
 
 $color-front-peach: #FDC279;
 $color-front-avocado: #DED479;
 $color-front-straw: #F3B1A6;
 
-$color-text-primary: #191d1c;
+$color-text-primary: #ffffff;
 $color-text-secondary: #f2f4f3;
 
 $space-small: 8px;
@@ -34,4 +34,4 @@ $border-small: 1px dottted $color-front-peach;
 $border-normal: 1px solid rgba(#cccccc, 0.3);
 $border-big : 5px dotted $color-front-peach;
 
-$shadow: 0px 0px 5px 5px rgba(#cccccc, 0.2);
+$shadow: 0px 10px 20px 20px rgba(#313139, 0.2);

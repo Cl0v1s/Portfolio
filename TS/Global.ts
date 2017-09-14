@@ -4,6 +4,7 @@ var ajax = <Ajax>require("ajax-promise");
 require("./../../tags/Home.tag");
 require("./../../tags/Header.tag");
 require("./../../tags/Footer.tag");
+require("./../../tags/Me.tag");
 
 
 require("./../../tags/Project/Project.tag");

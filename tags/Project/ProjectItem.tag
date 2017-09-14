@@ -13,7 +13,7 @@
                 { project.description }
             </p>
             <nav if="{ project.link != null }">
-                <a href="{ project.link }" target="_blank">Consulter le lien du projet</a>
+                <a href="{ project.link }" target="_blank">Consulter le projet</a>
             </nav>
         </div>
     </a>

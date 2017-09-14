@@ -18290,6 +18290,7 @@ var ajax = require("ajax-promise");
 require("./../../tags/Home.tag");
 require("./../../tags/Header.tag");
 require("./../../tags/Footer.tag");
+require("./../../tags/Me.tag");
 require("./../../tags/Project/Project.tag");
 require("./../../tags/Project/Projects.tag");
 require("./../../tags/Project/ProjectItem.tag");
@@ -18446,25 +18447,30 @@ window.App = App;
 window.Adapter = Adapter;
 window.ErrorHandler = ErrorHandler;
 
-},{"./../../tags/Footer.tag":43,"./../../tags/Header.tag":44,"./../../tags/Home.tag":45,"./../../tags/Project/Project.tag":46,"./../../tags/Project/ProjectItem.tag":47,"./../../tags/Project/Projects.tag":48,"ajax-promise":1,"riot":41,"riot-route":40}],43:[function(require,module,exports){
+},{"./../../tags/Footer.tag":43,"./../../tags/Header.tag":44,"./../../tags/Home.tag":45,"./../../tags/Me.tag":46,"./../../tags/Project/Project.tag":47,"./../../tags/Project/ProjectItem.tag":48,"./../../tags/Project/Projects.tag":49,"ajax-promise":1,"riot":41,"riot-route":40}],43:[function(require,module,exports){
 var riot = require('riot');
 module.exports = riot.tag2('app-footer', '', '', '', function(opts) {
 });
 },{"riot":41}],44:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-header', '<h1>Clovis Portron - Développeur Indépendant</h1>', '', 'id="top"', function(opts) {
+module.exports = riot.tag2('app-header', '<h1>Clovis Portron - Développeur Indépendant</h1>', '', '', function(opts) {
 });
 },{"riot":41}],45:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-home', '<app-header></app-header> <app-projects projects="{opts.projects}"></app-projects> <app-footer></app-footer>', '', '', function(opts) {
+module.exports = riot.tag2('app-home', '<app-header></app-header> <app-me></app-me> <app-projects projects="{opts.projects}"></app-projects> <app-footer></app-footer>', '', '', function(opts) {
 });
 },{"riot":41}],46:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-project', '', '', '', function(opts) {
+module.exports = riot.tag2('app-me', '<div class="picture"></div> <div class="description"> <p> Développeur polyvalent depuis de nombreuses années, je pratique mon activité professionnelle en parallèle de mon cursus étudiant. Lors de mes relations avec mes clients je porte un grand soin à bien développer les tenants et les aboutissants de mes actions, tout en essayant d\'apporter le plus grand soin à la réalisation de leurs demandes. Amateur de développement informatique depuis une dizaine d\'années, je suis titulaire d\'un DUT informatique ainsi que d\'une Licence dans le même domaine. Je m\'oriente désormais vers des études de cognitique (Expérience utilisateur). Vous pouvez consulter mon profil Github pour avoir un aperçu de mes travaux réalisés durant mon temps libre et/ou mon cursus. </p> <p class="center"> PHP - Python - Javascript - Typescript - Jquery - RiotJS - ReactJS - Ruby - C# - Basic - C++ - C - ASM - Assembleur - HTML5 - CSS - CSS3 </p> </div>', '', '', function(opts) {
+        var tag = this;
 });
 },{"riot":41}],47:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-projectitem', '<a href="#top"> <div class="{icon : true}"></div> <h2>{project.name}</h2> <div class="img" riot-style="background-image: url(\'{project.images[0]}\');"> <div each="{img in project.images}" riot-style="background-image: url(\'{img}\');"></div> </div> <div class="content"> <p class="resume"> {project.resume} </p> <p class="description"> {project.description} </p> <nav if="{project.link != null}"> <a href="{project.link}" target="_blank">Consulter le lien du projet</a> </nav> </div> </a>', '', '', function(opts) {
+module.exports = riot.tag2('app-project', '', '', '', function(opts) {
+});
+},{"riot":41}],48:[function(require,module,exports){
+var riot = require('riot');
+module.exports = riot.tag2('app-projectitem', '<a href="#top"> <div class="{icon : true}"></div> <h2>{project.name}</h2> <div class="img" riot-style="background-image: url(\'{project.images[0]}\');"> <div each="{img in project.images}" riot-style="background-image: url(\'{img}\');"></div> </div> <div class="content"> <p class="resume"> {project.resume} </p> <p class="description"> {project.description} </p> <nav if="{project.link != null}"> <a href="{project.link}" target="_blank">Consulter le projet</a> </nav> </div> </a>', '', '', function(opts) {
         var tag = this;
 
         tag.project = null;
@@ -18488,9 +18494,9 @@ module.exports = riot.tag2('app-projectitem', '<a href="#top"> <div class="{icon
             });
         });
 });
-},{"riot":41}],48:[function(require,module,exports){
+},{"riot":41}],49:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-projects', '<app-projectitem each="{project in projects}" project="{project}"></app-projectitem>', '', '', function(opts) {
+module.exports = riot.tag2('app-projects', '<app-projectitem each="{project in projects}" project="{project}"></app-projectitem>', '', 'id="top"', function(opts) {
         var tag = this;
 
         tag.projects = null;

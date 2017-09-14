@@ -1,4 +1,4 @@
-<app-projects>
+<app-projects id="top">
 
     <app-projectitem each="{ project in projects }" project="{ project }"></app-projectitem>
 

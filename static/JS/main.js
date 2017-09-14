@@ -108,6 +108,7 @@ var ajax = require("ajax-promise");
 require("./../../tags/Home.tag");
 require("./../../tags/Header.tag");
 require("./../../tags/Footer.tag");
+require("./../../tags/Me.tag");
 require("./../../tags/Project/Project.tag");
 require("./../../tags/Project/Projects.tag");
 require("./../../tags/Project/ProjectItem.tag");

@@ -11,7 +11,7 @@ app-projectitem
 
   overflow:hidden;
 
-  border: $border-normal;
+  border: 1px solid rgba(darken($color-back-primary, 7),0.2);
 
   margin: $space-normal;
 
@@ -22,6 +22,8 @@ app-projectitem
   transition: 0.1s all ease;
 
   cursor: pointer;
+
+  background: linear-gradient(#424252,#2d5963 );
 
   a
   {
@@ -53,8 +55,6 @@ app-projectitem
     margin-left: 0;
     margin-right: 0;
     margin-bottom: $space-big+$space-normal;
-    box-shadow: none;
-    border:0;
     height: auto;
     overflow: initial;
 

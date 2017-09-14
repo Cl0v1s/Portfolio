@@ -10,6 +10,10 @@ div#app
   min-height:100%;
 }
 
+body
+{
+  background-color: $color-back-primary;
+}
 
 
 @keyframes loading {
