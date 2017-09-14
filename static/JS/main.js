@@ -3,7 +3,7 @@ class Adapter {
         if (project.adapted)
             return project;
         project.adapted = true;
-        project.resume = project.description.substr(0, 200) + "...";
+        project.resume = project.description.substr(0, 100) + "...";
         return project;
     }
 }
@@ -77,8 +77,12 @@ class Router {
     static GetInstance() {
         return Router.Instance;
     }
+    static Redirect(link) {
+        route(link);
+    }
     start() {
-        route.start(true);
+        this.home();
+        //route.start(true);
     }
     /////////////////////////////////////////////////////////////////
     home() {

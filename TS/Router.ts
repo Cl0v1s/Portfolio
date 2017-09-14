@@ -12,6 +12,11 @@ class Router
         return Router.Instance;
     }
 
+    public static Redirect(link : string)
+    {
+        route(link);
+    }
+
     constructor()
     {
         this.setRoutes();
@@ -19,7 +24,8 @@ class Router
 
     public start() : void
     {
-        route.start(true);
+        this.home();
+        //route.start(true);
     }
 
     /////////////////////////////////////////////////////////////////

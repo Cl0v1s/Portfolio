@@ -6,7 +6,7 @@ class Adapter
             return project;
         project.adapted = true;
 
-        project.resume = project.description.substr(0,200)+"...";
+        project.resume = project.description.substr(0,100)+"...";
 
         return project;
     }

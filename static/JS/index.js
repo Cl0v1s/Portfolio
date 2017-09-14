@@ -18185,7 +18185,7 @@ class Adapter {
         if (project.adapted)
             return project;
         project.adapted = true;
-        project.resume = project.description.substr(0, 200) + "...";
+        project.resume = project.description.substr(0, 100) + "...";
         return project;
     }
 }
@@ -18259,8 +18259,12 @@ class Router {
     static GetInstance() {
         return Router.Instance;
     }
+    static Redirect(link) {
+        route(link);
+    }
     start() {
-        route.start(true);
+        this.home();
+        //route.start(true);
     }
     /////////////////////////////////////////////////////////////////
     home() {
@@ -18448,7 +18452,7 @@ module.exports = riot.tag2('app-footer', '', '', '', function(opts) {
 });
 },{"riot":41}],44:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-header', '<h1>Clovis Portron</h1>', '', '', function(opts) {
+module.exports = riot.tag2('app-header', '<h1>Clovis Portron - Développeur Indépendant</h1>', '', 'id="top"', function(opts) {
 });
 },{"riot":41}],45:[function(require,module,exports){
 var riot = require('riot');
@@ -18460,7 +18464,7 @@ module.exports = riot.tag2('app-project', '', '', '', function(opts) {
 });
 },{"riot":41}],47:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-projectitem', '<div class="{icon : true}"></div> <h2>{project.name}</h2> <div class="img" riot-style="background-image: url(\'{project.images[0]}\');"> <div each="{img in project.images}" riot-style="background-image: url(\'{img}\');"></div> </div> <div class="content"> <p class="resume"> {project.resume} </p> <p class="description"> {project.description} </p> <nav> <a href="{project.link}" target="_blank">Consulter le lien du projet</a> </nav> </div>', '', '', function(opts) {
+module.exports = riot.tag2('app-projectitem', '<a href="#top"> <div class="{icon : true}"></div> <h2>{project.name}</h2> <div class="img" riot-style="background-image: url(\'{project.images[0]}\');"> <div each="{img in project.images}" riot-style="background-image: url(\'{img}\');"></div> </div> <div class="content"> <p class="resume"> {project.resume} </p> <p class="description"> {project.description} </p> <nav if="{project.link != null}"> <a href="{project.link}" target="_blank">Consulter le lien du projet</a> </nav> </div> </a>', '', '', function(opts) {
         var tag = this;
 
         tag.project = null;
@@ -18469,6 +18473,19 @@ module.exports = riot.tag2('app-projectitem', '<div class="{icon : true}"></div>
            tag.project = Adapter.adaptProject(tag.opts.project);
            if(tag.project == null)
                throw new Error("Project cant be null");
+        });
+
+        tag.on("mount", function()
+        {
+            tag.root.addEventListener("click", function()
+            {
+                let parent = tag.root.parentElement;
+                parent.firstChild.classList.remove("expand");
+                tag.root.remove();
+                tag.root.classList.add("expand");
+                parent.insertBefore(tag.root, parent.firstChild);
+
+            });
         });
 });
 },{"riot":41}],48:[function(require,module,exports){

@@ -7,6 +7,9 @@ app-projectitem
   position: relative;
 
   width: 320px;
+  height: $height+100px;
+
+  overflow:hidden;
 
   border: $border-normal;
 
@@ -14,29 +17,62 @@ app-projectitem
 
   box-shadow: $shadow;
 
-  transition: 0.2s all ease;
+  clear: both;
+
+  transition: 0.1s all ease;
+
+  cursor: pointer;
+
+  a
+  {
+    text-decoration: none;
+  }
+
+  &:hover
+  {
+    transform: scale(1.1, 1.1);
+  }
 
 
   p.description
   {
     display: none;
+    text-decoration: none;
   }
 
   p.resume
   {
     display: block;
+    min-height: 100px;
+    text-decoration: none;
   }
 
-  &:hover, &:active
+  &.expand
   {
-    display: block;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: $space-big+$space-normal;
+    box-shadow: none;
+    border:0;
+    height: auto;
+    overflow: initial;
+
+    position: relative;
+
+
+
+    &:hover
+    {
+      transform: scale(1,1);
+    }
+
+
 
     p.description
     {
       display: block;
+      text-align: center;
     }
 
     p.resume
@@ -83,7 +119,7 @@ app-projectitem
   {
     padding: $space-normal;
     margin-bottom: 0;
-
+    text-decoration: none;
 
   }
 
@@ -128,15 +164,22 @@ app-projectitem
 
     z-index : 1;
 
+    nav a
+    {
+      text-decoration: underline;
+    }
 
     p
     {
       text-align: justify;
       //white-space: nowrap;
+      text-decoration: none;
       overflow: hidden;
       text-overflow: ellipsis;
       margin-bottom: $space-normal;
     }
 
   }
+
+
 }

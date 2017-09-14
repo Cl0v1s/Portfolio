@@ -212,7 +212,6 @@ p {
 /** Importation des styles des tags **/
 app-header {
   display: block;
-  border-bottom: 1px solid rgba(204, 204, 204, 0.3);
   padding: 20px;
   margin-bottom: 40px; }
   app-header h1 {
@@ -222,32 +221,51 @@ app-projectitem {
   display: inline-block;
   position: relative;
   width: 320px;
+  height: 400px;
+  overflow: hidden;
   border: 1px solid rgba(204, 204, 204, 0.3);
   margin: 20px;
   box-shadow: 0px 0px 5px 5px rgba(204, 204, 204, 0.2);
-  transition: 0.2s all ease; }
+  clear: both;
+  transition: 0.1s all ease;
+  cursor: pointer; }
+  app-projectitem a {
+    text-decoration: none; }
+  app-projectitem:hover {
+    transform: scale(1.1, 1.1); }
   app-projectitem p.description {
-    display: none; }
+    display: none;
+    text-decoration: none; }
   app-projectitem p.resume {
-    display: block; }
-  app-projectitem:hover, app-projectitem:active {
     display: block;
+    min-height: 100px;
+    text-decoration: none; }
+  app-projectitem.expand {
     width: 100%;
     margin-left: 0;
-    margin-right: 0; }
-    app-projectitem:hover p.description, app-projectitem:active p.description {
-      display: block; }
-    app-projectitem:hover p.resume, app-projectitem:active p.resume {
+    margin-right: 0;
+    margin-bottom: 60px;
+    box-shadow: none;
+    border: 0;
+    height: auto;
+    overflow: initial;
+    position: relative; }
+    app-projectitem.expand:hover {
+      transform: scale(1, 1); }
+    app-projectitem.expand p.description {
+      display: block;
+      text-align: center; }
+    app-projectitem.expand p.resume {
       display: none; }
-    app-projectitem:hover div.img, app-projectitem:active div.img {
+    app-projectitem.expand div.img {
       background-size: 0;
       position: relative;
       overflow: hidden; }
-      app-projectitem:hover div.img div, app-projectitem:active div.img div {
+      app-projectitem.expand div.img div {
         display: inline-block;
         opacity: 1;
         margin: 20px; }
-      app-projectitem:hover div.img::before, app-projectitem:active div.img::before {
+      app-projectitem.expand div.img::before {
         content: "";
         position: absolute;
         top: 0;
@@ -260,7 +278,8 @@ app-projectitem {
         z-index: -1; }
   app-projectitem h2 {
     padding: 20px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-decoration: none; }
   app-projectitem div.img {
     width: 100%;
     min-height: 200px;
@@ -281,8 +300,11 @@ app-projectitem {
     background-size: 0;
     position: relative;
     z-index: 1; }
+    app-projectitem div.content nav a {
+      text-decoration: underline; }
     app-projectitem div.content p {
       text-align: justify;
+      text-decoration: none;
       overflow: hidden;
       text-overflow: ellipsis;
       margin-bottom: 20px; }
@@ -301,7 +323,8 @@ html, body {
   font-size: 16px;
   color: #191d1c;
   font-family: "Raleway";
-  z-index: 0; }
+  z-index: 0;
+  line-height: 19px; }
 
 div.vertical-center {
   display: table; }

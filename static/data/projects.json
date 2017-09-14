@@ -2,9 +2,37 @@
   "projects" : [
     {
       "name" : "OIM - Gestion de contact",
-      "images" : ["https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/19437346_1781116398570699_7248089724290376959_n.jpg?oh=251ce2ab687cb0803ebca79d28f90657&oe=5A52FEAB", "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/19437346_1781116398570699_7248089724290376959_n.jpg?oh=251ce2ab687cb0803ebca79d28f90657&oe=5A52FEAB"],
-      "description" : "Enim quos quia harum excepturi soluta consequatur temporibus rerum. Molestiae molestiae tempora cum qui et et. Non esse voluptate et inventore assumenda. Et voluptatibus sit voluptatum cum explicabo repellendus minima.      Ut itaque tempore optio. Perspiciatis sed id est provident ullam. Enim inventore animi consequuntur quia ullam perferendis. Blanditiis sunt nostrum dolore voluptates. Possimus eos qui in quam. Molestiae magni nobis debitis et quia.Necessitatibus totam est quasi quia asperiores et. Praesentium labore consequatur architecto qui. Consequatur nesciunt harum maiores alias et. Vero in cumque unde non rem id nulla.Ea qui natus aut voluptatem culpa. Vel explicabo autem fuga. Rem libero impedit qui exercitationem veritatis. Quis doloremque blanditiis corporis est sit vitae provident rerum. Ut quo quo qui ut harum.Culpa inventore aperiam vero perferendis. Aut quia voluptatum consequatur sed. Voluptatem ad est voluptates occaecati quia sequi. Qui quo quia dolores aliquid asperiores ut.",
-      "link" : "https://www.facebook.com/photo.php?fbid=1781116398570699&set=a.157797214235967.39701.100000170680825&type=3&theater",
+      "images" : ["/static/img/OIM1.png", "/static/img/OIM2.png"],
+      "description" : "Etant donné le grand nombre de contacts à gérer, l'association Osons Ici et Maintenant souhaitait la réalisation d'un logiciel de gestion de contacts, permettant une recherche facile parmi les entrées enregistrées et une grande interopérabilité avec leur système informatique existant (Excel, logiciels de mailing).",
+      "link" : null,
+      "type" : "web"
+    },
+    {
+      "name" : "Mediao",
+      "images" : ["/static/img/Mediao1.png", "/static/img/Mediao2.png", "/static/img/Mediao3.png"],
+      "description" : "Intégration du design mis au point par l'entreprise bordelaise C2 Studio, pour le compte de la start-up Mediao visant à fournir une information fiable et vérifiée.",
+      "link" : "https://mediao.fr",
+      "type" : "web"
+    },
+    {
+      "name" : "Across The Dungeon GB",
+      "images" : ["/static/img/ATDGB.gif"],
+      "description" : "Un rogueLike pour gameboy codé en ASM.",
+      "link" : "https://github.com/Clovis-Portron/AcrossTheDungeonGB",
+      "type" : "game"
+    },
+    {
+      "name" : "Agence Bugeau - Maintenance de site internet",
+      "images" : ["https://cloudinary-a.akamaihd.net/hopwork/image/upload/w_1024,c_limit/ximbpbv4zef7xtlyhlri.jpg"],
+      "description" : "Suite à de nombreux changement dans son catalogue, l'agence Bugeau souhaitait la mise à jour de son site Internet statique, et ce de manière régulière.",
+      "link" : "http://agence-bugeau.fr",
+      "type" : "web"
+    },
+    {
+      "name" : "Charlène Verrier - Conversion de site statique vers site dynamique",
+      "images" : ["/static/img/CHA1.png", "/static/img/CHA2.png", "/static/img/CHA3.png"],
+      "description" : "Charlène Verrier, infographiste et développeuse front-end disposait d'un site statique au design original.Il s'agissait, durement cette mission, d'adapter le site statique existant à un gestionnaire de contenu headless afin de laisser la plus grande marge de manœuvre possible à Mlle Verrier quand à la construction graphique de son portfolio.",
+      "link" : "http://cha.graphics",
       "type" : "web"
     }
   ]
