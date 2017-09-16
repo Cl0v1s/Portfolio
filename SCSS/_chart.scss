@@ -13,25 +13,25 @@ $font-secondary: 'Lobster';
 
 $font-size-small: 14px;
 $font-size-normal: 16px;
-$font-size-big : 20px;
+$font-size-big : 30px;
 
 // Définition des couleurs
-$color-back-primary : #42424a;
-$color-back-secondary : #e3dfd6;
+$color-back-primary : #8373b5;
+$color-back-secondary : #91425f;
 
 $color-front-peach: #FDC279;
 $color-front-avocado: #DED479;
 $color-front-straw: #F3B1A6;
 
 $color-text-primary: #ffffff;
-$color-text-secondary: #f2f4f3;
+$color-text-secondary: rgba(50,50,50,1);
 
 $space-small: 8px;
-$space-normal: 20px;
+$space-normal: 23px;
 $space-big: 40px;
 
 $border-small: 1px dottted $color-front-peach;
 $border-normal: 1px solid rgba(#cccccc, 0.3);
 $border-big : 5px dotted $color-front-peach;
 
-$shadow: 0px 10px 20px 20px rgba(#313139, 0.2);
+$shadow: 0px 0px 10px 5px rgba(#313139, 0.1);

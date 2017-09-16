@@ -1,74 +1,81 @@
 app-me
 {
   display: block;
-  min-height: 200px;
+  width: 100%;
 
   position: relative;
 
-  overflow: hidden;
+  z-index: 1;
 
-  margin-bottom: $space-normal;
-  padding : $space-normal;
-
-  box-shadow: 0px 0px 15px 10px rgba(black,0.3) inset;
+  padding-top: $space-big;
 
 
-  div.picture
+  &>div.presentation
   {
-    border-radius: 5px;
+    display: block;
+    width: 70%;
 
-    width: 200px;
-    height: 200px;
 
     margin: auto;
 
-    background-image : url('https://cloudinary-a.akamaihd.net/hopwork/image/upload/h_360,w_360,c_thumb,g_face,z_0.4,q_auto,dpr_2.0/ln7rzkatcng2tmpptjpz.webp');
-    background-size: cover;
-    background-position: center;
 
-    box-shadow: 0px 0px 15px 10px rgba(black,0.3) ;
+    h1
+    {
+      text-align: center;
+      margin-bottom: 0;
+    }
 
-  }
+    hr
+    {
+      border: 1px solid white;
+      margin-top: $space-normal;
+    }
 
-  div.description
-  {
-    padding : $space-big;
-    text-align: justify;
+    span
+    {
+      display: block;
+      text-align: center;
+    }
 
     p
     {
-      margin-bottom: $space-normal;
-      background-color: rgba(black,0.3);
-      padding : $space-normal;
+      padding: $space-normal;
+      line-height: 26px;
+      text-align: justify;
     }
 
-    p.center
-    {
-      text-align: center;
-    }
   }
 
-  &::before
-  {
-    content: "";
+  &>div.background {
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
+    display: block;
     width: 100%;
     height: 100%;
 
-    filter: blur(5px);
-    opacity: 0.5;
+    //background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/19424185_1338370809604439_7754331859132391295_n.jpg?oh=8b847ced9cdd899f99b098769e03e52f&oe=5A148104");
+    background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/1146781_704831796199170_1482179578_o.jpg?oh=38124b715b8836baa4aa04180422e186&oe=5A12EEAC");
 
-    z-index : -1;
-    //background-image: url("https://static.pexels.com/photos/1443/stairs-lights-abstract-bubbles.jpg");
- background-image: url("/static/img/pexels-photo.jpg");
-   // background-image: url("https://static.pexels.com/photos/207130/pexels-photo-207130.jpeg");
-    //background-image: url("https://static.pexels.com/photos/316093/pexels-photo-316093.jpeg");
-
-    //background-image: url("https://static.pexels.com/photos/363622/pexels-photo-363622.jpeg");
-    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
+    box-shadow: 0px -5px 10px 10px rgba(0,0,0,0.4);
+
+
+    &::before {
+      opacity: 0.7;
+      background: linear-gradient($color-back-primary, $color-back-secondary);
+
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      background-size: cover;
+      background-position: center;
+    }
   }
 }

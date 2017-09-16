@@ -22,14 +22,14 @@
       "type" : "game"
     },
     {
-      "name" : "Agence Bugeau - Maintenance de site internet",
+      "name" : "Agence Bugeau",
       "images" : ["https://cloudinary-a.akamaihd.net/hopwork/image/upload/w_1024,c_limit/ximbpbv4zef7xtlyhlri.jpg"],
       "description" : "Suite à de nombreux changements dans son catalogue, l'agence Bugeau souhaitait la mise à jour de son site Internet statique, et ce de manière régulière.",
       "link" : "http://agence-bugeau.fr",
       "type" : "web"
     },
     {
-      "name" : "Charlène Verrier - Conversion de site statique vers site dynamique",
+      "name" : "Charlène Verrier",
       "images" : ["/static/img/CHA1.png", "/static/img/CHA2.png", "/static/img/CHA3.png"],
       "description" : "Charlène Verrier, infographiste et développeuse front-end disposait d'un site statique au design original.Il s'agissait, durant cette mission, d'adapter le site statique existant à un gestionnaire de contenu headless afin de laisser la plus grande marge de manœuvre possible à Mlle Verrier quand à la construction graphique de son portfolio.",
       "link" : "http://cha.graphics",

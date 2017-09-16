@@ -74,8 +74,17 @@ table {
 div#app {
   min-height: 100%; }
 
-body {
-  background-color: #42424a; }
+div.title {
+  margin: auto;
+  margin-top: 23px;
+  width: 60%;
+  color: #323232; }
+  div.title h1 {
+    margin-bottom: 0;
+    text-align: center;
+    color: #323232; }
+  div.title hr {
+    border: 1px solid #323232; }
 
 @keyframes loading {
   0% {
@@ -113,13 +122,13 @@ div#popup {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #42424a;
+  background-color: #8373b5;
   border-radius: 2px;
   z-index: 1;
   border: 1px solid #FDC279;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  padding-top: 60px;
+  padding: 23px;
+  padding-top: 63px;
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 90%; }
@@ -132,9 +141,9 @@ div#popup {
     content: attr(data-name);
     font-family: "Raleway", sans-serif;
     padding: 8px;
-    font-size: 20px;
+    font-size: 30px;
     background-color: #FDC279;
-    color: #42424a; }
+    color: #8373b5; }
   div#popup div.close {
     content: "🞩";
     display: inline-block;
@@ -143,11 +152,11 @@ div#popup {
     display: inline-block;
     top: 0;
     right: 0;
-    font-size: 20px;
+    font-size: 30px;
     text-align: right;
     padding-top: 8px;
     padding-right: 8px;
-    color: #42424a;
+    color: #8373b5;
     cursor: pointer; }
 
 div#hidder {
@@ -159,20 +168,20 @@ div#hidder {
   background-color: rgba(0, 0, 0, 0.3); }
 
 h1 {
-  font-size: 20px;
+  font-size: 30px;
   font-family: "Lobster";
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   padding: 8px;
   padding-left: 0; }
 
 h2 {
   font-family: "Lobster";
-  font-size: 20px;
-  margin-bottom: 20px; }
+  font-size: 30px;
+  margin-bottom: 23px; }
 
 section {
   border-bottom: 2px dotted #F3B1A6;
-  margin-bottom: 20px; }
+  margin-bottom: 23px; }
 
 table {
   table-layout: fixed;
@@ -182,7 +191,7 @@ table {
   table.dark tr {
     border-bottom: 1px dotted white; }
   table.dark a {
-    color: #f2f4f3; }
+    color: #323232; }
   table tr:last-of-type {
     border: 0; }
   table td {
@@ -202,7 +211,7 @@ img.profile {
   width: 50px;
   height: 50px;
   background-color: #FDC279;
-  color: #42424a;
+  color: #8373b5;
   border-radius: 100%;
   line-height: 50px;
   text-align: center;
@@ -215,49 +224,55 @@ p {
 /** Importation des styles des tags **/
 app-header {
   display: block;
-  padding: 20px; }
+  padding: 23px; }
   app-header h1 {
     margin-bottom: 0; }
 
 app-me {
   display: block;
-  min-height: 200px;
+  width: 100%;
   position: relative;
-  overflow: hidden;
-  margin-bottom: 20px;
-  padding: 20px;
-  box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.3) inset; }
-  app-me div.picture {
-    border-radius: 5px;
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    background-image: url("https://cloudinary-a.akamaihd.net/hopwork/image/upload/h_360,w_360,c_thumb,g_face,z_0.4,q_auto,dpr_2.0/ln7rzkatcng2tmpptjpz.webp");
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.3); }
-  app-me div.description {
-    padding: 40px;
-    text-align: justify; }
-    app-me div.description p {
-      margin-bottom: 20px;
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 20px; }
-    app-me div.description p.center {
+  z-index: 1;
+  padding-top: 40px; }
+  app-me > div.presentation {
+    display: block;
+    width: 70%;
+    margin: auto; }
+    app-me > div.presentation h1 {
+      text-align: center;
+      margin-bottom: 0; }
+    app-me > div.presentation hr {
+      border: 1px solid white;
+      margin-top: 23px; }
+    app-me > div.presentation span {
+      display: block;
       text-align: center; }
-  app-me::before {
-    content: "";
+    app-me > div.presentation p {
+      padding: 23px;
+      line-height: 26px;
+      text-align: justify; }
+  app-me > div.background {
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
+    display: block;
     width: 100%;
     height: 100%;
-    filter: blur(5px);
-    opacity: 0.5;
-    z-index: -1;
-    background-image: url("/static/img/pexels-photo.jpg");
+    background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/1146781_704831796199170_1482179578_o.jpg?oh=38124b715b8836baa4aa04180422e186&oe=5A12EEAC");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
-    background-size: cover; }
+    box-shadow: 0px -5px 10px 10px rgba(0, 0, 0, 0.4); }
+    app-me > div.background::before {
+      opacity: 0.7;
+      background: linear-gradient(#8373b5, #91425f);
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center; }
 
 app-projectitem {
   display: inline-block;
@@ -265,13 +280,37 @@ app-projectitem {
   width: 320px;
   height: 400px;
   overflow: hidden;
-  border: 1px solid rgba(49, 49, 55, 0.2);
-  margin: 20px;
-  box-shadow: 0px 10px 20px 20px rgba(49, 49, 57, 0.2);
+  border: 1px solid rgba(110, 92, 169, 0.2);
+  margin: 23px;
+  box-shadow: 0px 0px 10px 5px rgba(49, 49, 57, 0.1);
   clear: both;
   transition: 0.1s all ease;
   cursor: pointer;
-  background: linear-gradient(#424252, #2d5963); }
+  background: linear-gradient(#8373b5, #91425f);
+  border-width: 3px;
+  border-style: solid;
+  -webkit-border-image: -webkit-linear-gradient(#8373b5, #91425f) 1 100%;
+  -moz-border-image: -moz-linear-gradient(#8373b5, #91425f) 1 100%;
+  -o-border-image: -o-linear-gradient(#8373b5, #91425f) 1 100%;
+  border-image: linear-gradient(to bottom, #8373b5, #91425f) 1 100%;
+  border-top: 0;
+  border-bottom: 0; }
+  app-projectitem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #8373b5; }
+  app-projectitem::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #91425f; }
   app-projectitem a {
     text-decoration: none; }
   app-projectitem:hover {
@@ -284,10 +323,9 @@ app-projectitem {
     min-height: 100px;
     text-decoration: none; }
   app-projectitem.expand {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 60px;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 63px;
     height: auto;
     overflow: initial;
     position: relative; }
@@ -305,7 +343,7 @@ app-projectitem {
       app-projectitem.expand div.img div {
         display: inline-block;
         opacity: 1;
-        margin: 20px; }
+        margin: 23px; }
       app-projectitem.expand div.img::before {
         content: "";
         position: absolute;
@@ -318,9 +356,10 @@ app-projectitem {
         filter: blur(15px);
         z-index: -1; }
   app-projectitem h2 {
-    padding: 20px;
+    padding: 23px;
     margin-bottom: 0;
-    text-decoration: none; }
+    text-decoration: none;
+    line-height: 30px; }
   app-projectitem div.img {
     width: 100%;
     min-height: 200px;
@@ -337,7 +376,7 @@ app-projectitem {
       background-position: center;
       border-radius: 2px; }
   app-projectitem div.content {
-    padding: 20px;
+    padding: 23px;
     background-size: 0;
     position: relative;
     z-index: 1; }
@@ -348,12 +387,13 @@ app-projectitem {
       text-decoration: none;
       overflow: hidden;
       text-overflow: ellipsis;
-      margin-bottom: 20px; }
+      margin-bottom: 23px; }
 
 app-projects {
   display: block;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  padding-top: 23px; }
 
 html, body {
   height: 100%;

@@ -23,7 +23,44 @@ app-projectitem
 
   cursor: pointer;
 
-  background: linear-gradient(#424252,#2d5963 );
+  background: linear-gradient($color-back-primary,$color-back-secondary );
+
+  border-width: 3px;
+  border-style: solid;
+  -webkit-border-image:
+          -webkit-linear-gradient($color-back-primary, $color-back-secondary) 1 100%;
+  -moz-border-image:
+          -moz-linear-gradient($color-back-primary, $color-back-secondary) 1 100%;
+  -o-border-image:
+          -o-linear-gradient($color-back-primary, $color-back-secondary) 1 100%;
+  border-image:
+          linear-gradient(to bottom, $color-back-primary, $color-back-secondary) 1 100%;
+
+  border-top:0;
+  border-bottom: 0;
+
+  &::before
+  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $color-back-primary;
+  }
+
+  &::after
+  {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $color-back-secondary;
+  }
+
 
   a
   {
@@ -51,9 +88,8 @@ app-projectitem
 
   &.expand
   {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    width: 95%;
+    margin: auto;
     margin-bottom: $space-big+$space-normal;
     height: auto;
     overflow: initial;
@@ -120,6 +156,7 @@ app-projectitem
     padding: $space-normal;
     margin-bottom: 0;
     text-decoration: none;
+    line-height: $font-size-big;
 
   }
 

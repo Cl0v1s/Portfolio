@@ -1,6 +1,9 @@
 <app-me>
-    <div class="picture"></div>
-    <div class="description">
+    <div class="background"></div>
+    <div class="presentation">
+        <h1>Clovis Portron</h1>
+        <span>Développeur Indépendant</span>
+        <hr>
         <p>
             Développeur polyvalent depuis de nombreuses années, je pratique mon activité professionnelle en parallèle de mon cursus étudiant.
 
@@ -8,11 +11,10 @@
 
             Amateur de développement informatique depuis une dizaine d'années, je suis titulaire d'un DUT informatique ainsi que d'une Licence dans le même domaine. Je m'oriente désormais vers des études de cognitique (Expérience utilisateur). Vous pouvez consulter mon profil Github pour avoir un aperçu de mes travaux réalisés durant mon temps libre et/ou mon cursus.
         </p>
-        <p class="center">
-                PHP - Python - Javascript - Typescript - Jquery - RiotJS - ReactJS - Ruby - C# - Basic - C++ - C - ASM - Assembleur - HTML5 - CSS - CSS3
-        </p>
+        <nav>
+            
+        </nav>
     </div>
-
     <script>
         var tag = this;
     </script>

@@ -6,7 +6,7 @@
   "scripts": {
     "run": "concurrently 'superstatic' 'vogue'",
     "build": "tsc --project TS && browserify static/JS/main.js --standalone app > static/JS/index.js && node-sass SCSS/main.scss static/CSS/main.css",
-    "style" : "node-sass SCSS/main.scss static/CSS/main.css"
+    "style": "node-sass SCSS/main.scss static/CSS/main.css"
   },
   "author": "Clovis Portron",
   "license": "ISC",

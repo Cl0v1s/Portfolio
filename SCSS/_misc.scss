@@ -12,7 +12,28 @@ div#app
 
 body
 {
-  background-color: $color-back-primary;
+  //background-color: #BEBAA8;
+}
+div.title
+{
+  margin: auto;
+  margin-top: $space-normal;
+
+  width: 60%;
+
+  color: $color-text-secondary;
+  h1
+  {
+    margin-bottom: 0;
+    text-align: center;
+    color: $color-text-secondary;
+  }
+
+  hr
+  {
+    border: 1px solid rgba(50,50,50,1);
+
+  }
 }
 
 

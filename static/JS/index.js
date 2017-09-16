@@ -18457,11 +18457,11 @@ module.exports = riot.tag2('app-header', '<h1>Clovis Portron - Développeur Ind�
 });
 },{"riot":41}],45:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-home', '<app-header></app-header> <app-me></app-me> <app-projects projects="{opts.projects}"></app-projects> <app-footer></app-footer>', '', '', function(opts) {
+module.exports = riot.tag2('app-home', '<app-me></app-me> <div class="title"> <h1>Quelques projets</h1> <hr> </div> <app-projects projects="{opts.projects}"></app-projects> <app-footer></app-footer>', '', '', function(opts) {
 });
 },{"riot":41}],46:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-me', '<div class="picture"></div> <div class="description"> <p> Développeur polyvalent depuis de nombreuses années, je pratique mon activité professionnelle en parallèle de mon cursus étudiant. Lors de mes relations avec mes clients je porte un grand soin à bien développer les tenants et les aboutissants de mes actions, tout en essayant d\'apporter le plus grand soin à la réalisation de leurs demandes. Amateur de développement informatique depuis une dizaine d\'années, je suis titulaire d\'un DUT informatique ainsi que d\'une Licence dans le même domaine. Je m\'oriente désormais vers des études de cognitique (Expérience utilisateur). Vous pouvez consulter mon profil Github pour avoir un aperçu de mes travaux réalisés durant mon temps libre et/ou mon cursus. </p> <p class="center"> PHP - Python - Javascript - Typescript - Jquery - RiotJS - ReactJS - Ruby - C# - Basic - C++ - C - ASM - Assembleur - HTML5 - CSS - CSS3 </p> </div>', '', '', function(opts) {
+module.exports = riot.tag2('app-me', '<div class="background"></div> <div class="presentation"> <h1>Clovis Portron</h1> <span>Développeur Indépendant</span> <hr> <p> Développeur polyvalent depuis de nombreuses années, je pratique mon activité professionnelle en parallèle de mon cursus étudiant. Lors de mes relations avec mes clients je porte un grand soin à bien développer les tenants et les aboutissants de mes actions, tout en essayant d\'apporter le plus grand soin à la réalisation de leurs demandes. Amateur de développement informatique depuis une dizaine d\'années, je suis titulaire d\'un DUT informatique ainsi que d\'une Licence dans le même domaine. Je m\'oriente désormais vers des études de cognitique (Expérience utilisateur). Vous pouvez consulter mon profil Github pour avoir un aperçu de mes travaux réalisés durant mon temps libre et/ou mon cursus. </p> </div>', '', '', function(opts) {
         var tag = this;
 });
 },{"riot":41}],47:[function(require,module,exports){
