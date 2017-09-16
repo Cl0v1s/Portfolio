@@ -11,9 +11,12 @@
 
             Amateur de développement informatique depuis une dizaine d'années, je suis titulaire d'un DUT informatique ainsi que d'une Licence dans le même domaine. Je m'oriente désormais vers des études de cognitique (Expérience utilisateur). Vous pouvez consulter mon profil Github pour avoir un aperçu de mes travaux réalisés durant mon temps libre et/ou mon cursus.
         </p>
+
         <nav>
-            
+
         </nav>
+
+
     </div>
     <script>
         var tag = this;

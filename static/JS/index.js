@@ -18449,7 +18449,16 @@ window.ErrorHandler = ErrorHandler;
 
 },{"./../../tags/Footer.tag":43,"./../../tags/Header.tag":44,"./../../tags/Home.tag":45,"./../../tags/Me.tag":46,"./../../tags/Project/Project.tag":47,"./../../tags/Project/ProjectItem.tag":48,"./../../tags/Project/Projects.tag":49,"ajax-promise":1,"riot":41,"riot-route":40}],43:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-footer', '', '', '', function(opts) {
+module.exports = riot.tag2('app-footer', '<a class="hopwork_widget" href="https://www.hopwork.fr/profile/clovisportron" data-id="592c1b44db554c30cedd8fab" data-picture="true" data-description="false" data-tags="true" data-recos="true" data-height="476" data-width="250" data-style="clear">Voir mon profil freelance</a>', '', '', function(opts) {
+        (function(d,id) {
+            if (d.getElementById(id)) return;
+            var s = d.createElement('script');
+            var c = d.getElementsByTagName('script')[0];
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://widgets.hopwork.com/1.0.0/js/sdk.wgt.min.js';
+            c.parentNode.insertBefore(s, c);
+        })(document,'hopwork-sdkjs-wgt');
 });
 },{"riot":41}],44:[function(require,module,exports){
 var riot = require('riot');
@@ -18457,11 +18466,11 @@ module.exports = riot.tag2('app-header', '<h1>Clovis Portron - Développeur Ind�
 });
 },{"riot":41}],45:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-home', '<app-me></app-me> <div class="title"> <h1>Quelques projets</h1> <hr> </div> <app-projects projects="{opts.projects}"></app-projects> <app-footer></app-footer>', '', '', function(opts) {
+module.exports = riot.tag2('app-home', '<app-me></app-me> <div class="title"> <h1>Quelques projets</h1> <hr> </div> <app-projects projects="{opts.projects}"></app-projects> <div class="title"> <h1>D\'autres informations</h1> <hr> </div> <app-footer></app-footer>', '', '', function(opts) {
 });
 },{"riot":41}],46:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-me', '<div class="background"></div> <div class="presentation"> <h1>Clovis Portron</h1> <span>Développeur Indépendant</span> <hr> <p> Développeur polyvalent depuis de nombreuses années, je pratique mon activité professionnelle en parallèle de mon cursus étudiant. Lors de mes relations avec mes clients je porte un grand soin à bien développer les tenants et les aboutissants de mes actions, tout en essayant d\'apporter le plus grand soin à la réalisation de leurs demandes. Amateur de développement informatique depuis une dizaine d\'années, je suis titulaire d\'un DUT informatique ainsi que d\'une Licence dans le même domaine. Je m\'oriente désormais vers des études de cognitique (Expérience utilisateur). Vous pouvez consulter mon profil Github pour avoir un aperçu de mes travaux réalisés durant mon temps libre et/ou mon cursus. </p> </div>', '', '', function(opts) {
+module.exports = riot.tag2('app-me', '<div class="background"></div> <div class="presentation"> <h1>Clovis Portron</h1> <span>Développeur Indépendant</span> <hr> <p> Développeur polyvalent depuis de nombreuses années, je pratique mon activité professionnelle en parallèle de mon cursus étudiant. Lors de mes relations avec mes clients je porte un grand soin à bien développer les tenants et les aboutissants de mes actions, tout en essayant d\'apporter le plus grand soin à la réalisation de leurs demandes. Amateur de développement informatique depuis une dizaine d\'années, je suis titulaire d\'un DUT informatique ainsi que d\'une Licence dans le même domaine. Je m\'oriente désormais vers des études de cognitique (Expérience utilisateur). Vous pouvez consulter mon profil Github pour avoir un aperçu de mes travaux réalisés durant mon temps libre et/ou mon cursus. </p> <nav> </nav> </div>', '', '', function(opts) {
         var tag = this;
 });
 },{"riot":41}],47:[function(require,module,exports){
