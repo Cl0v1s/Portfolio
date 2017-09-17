@@ -258,6 +258,33 @@ app-me {
       text-align: justify; }
     app-me > div.presentation iframe {
       float: left; }
+    app-me > div.presentation nav.links {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 23px; }
+      app-me > div.presentation nav.links a {
+        display: inline-block;
+        opacity: 0.7;
+        width: 50px;
+        height: 50px;
+        margin: 23px;
+        margin-top: 0;
+        background-size: 100% 100%;
+        background-position: center;
+        vertical-align: middle;
+        transition: all 0.2s ease; }
+        app-me > div.presentation nav.links a:hover {
+          transform: scale(1.2, 1.2);
+          opacity: 1; }
+        app-me > div.presentation nav.links a.mail {
+          background-image: url("/static/img/email.png"); }
+        app-me > div.presentation nav.links a.twitter {
+          background-image: url("/static/img/twitter.svg"); }
+        app-me > div.presentation nav.links a.linkedin {
+          background-image: url("/static/img/linkedin.svg");
+          width: 57px;
+          height: 57px; }
   app-me > div.background {
     z-index: -1;
     position: absolute;
