@@ -34,6 +34,13 @@
       "description" : "Charlène Verrier, infographiste et développeuse front-end disposait d'un site statique au design original.Il s'agissait, durant cette mission, d'adapter le site statique existant à un gestionnaire de contenu headless afin de laisser la plus grande marge de manœuvre possible à Mlle Verrier quand à la construction graphique de son portfolio.",
       "link" : "http://cha.graphics",
       "type" : "web"
+    },
+    {
+      "name" : "La Gorgone",
+      "images" : ["/static/img/LaGorgone1.png", "/static/img/LaGorgone2.png"],
+      "description" : "Jade Rigouste, passionnée d'Histoire, la raconte sur son blog en replaçant les petites histoires dans la grande.",
+      "link" : "http://blog.lagorgone.cf",
+      "type" : "web"
     }
   ]
 }
