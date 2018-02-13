@@ -4,11 +4,11 @@
 **/
 @font-face {
   font-family: "Raleway";
-  src: url("/static/fonts/JosefinSans-Regular.ttf"); }
+  src: url("./../fonts/JosefinSans-Regular.ttf"); }
 
 @font-face {
   font-family: "Lobster";
-  src: url("/static/fonts/JosefinSlab-Regular.ttf"); }
+  src: url("./../fonts/JosefinSlab-Regular.ttf"); }
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -62,11 +62,11 @@ table {
 **/
 @font-face {
   font-family: "Raleway";
-  src: url("/static/fonts/JosefinSans-Regular.ttf"); }
+  src: url("./../fonts/JosefinSans-Regular.ttf"); }
 
 @font-face {
   font-family: "Lobster";
-  src: url("/static/fonts/JosefinSlab-Regular.ttf"); }
+  src: url("./../fonts/JosefinSlab-Regular.ttf"); }
 
 .invisible {
   display: none !important; }
