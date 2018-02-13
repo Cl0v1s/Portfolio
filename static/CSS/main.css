@@ -293,7 +293,7 @@ app-me {
     display: block;
     width: 100%;
     height: 100%;
-    background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/1146781_704831796199170_1482179578_o.jpg?oh=38124b715b8836baa4aa04180422e186&oe=5A12EEAC");
+    background-image: url("./../img/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
