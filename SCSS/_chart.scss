@@ -16,15 +16,16 @@ $font-size-normal: 16px;
 $font-size-big : 30px;
 
 // Définition des couleurs
-$color-back-primary : #8373b5;
-$color-back-secondary : #91425f;
+$color-back-primary : #07C4C3;
+$color-back-secondary : #0489AA;
+$color-back-third : #000000;
 
 $color-front-peach: #FDC279;
 $color-front-avocado: #DED479;
 $color-front-straw: #F3B1A6;
 
 $color-text-primary: #ffffff;
-$color-text-secondary: rgba(50,50,50,1);
+$color-text-secondary: $color-back-primary;
 
 $space-small: 8px;
 $space-normal: 23px;
