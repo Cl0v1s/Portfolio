@@ -314,21 +314,24 @@ app-projectitem {
   width: 320px;
   height: 400px;
   overflow: hidden;
-  border: 1px solid rgba(110, 92, 169, 0.2);
   margin: 23px;
   box-shadow: 0px 0px 10px 5px rgba(49, 49, 57, 0.1);
   clear: both;
   transition: 0.1s all ease;
   cursor: pointer;
   background: linear-gradient(#8373b5, #91425f);
-  border-width: 3px;
-  border-style: solid;
-  -webkit-border-image: -webkit-linear-gradient(#8373b5, #91425f) 1 100%;
-  -moz-border-image: -moz-linear-gradient(#8373b5, #91425f) 1 100%;
-  -o-border-image: -o-linear-gradient(#8373b5, #91425f) 1 100%;
-  border-image: linear-gradient(to bottom, #8373b5, #91425f) 1 100%;
-  border-top: 0;
-  border-bottom: 0; }
+  /*-webkit-border-image:
+          -webkit-linear-gradient($color-back-primary, $color-back-secondary) 1 100%;
+  -moz-border-image:
+          -moz-linear-gradient($color-back-primary, $color-back-secondary) 1 100%;
+  -o-border-image:
+          -o-linear-gradient($color-back-primary, $color-back-secondary) 1 100%;
+  border-image:
+          linear-gradient(to bottom, $color-back-primary, $color-back-secondary) 1 100%;*/
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); }
   app-projectitem::before {
     content: "";
     position: absolute;
