@@ -72,19 +72,33 @@ table {
   display: none !important; }
 
 div#app {
+  position: relative;
   min-height: 100%; }
+
+div#app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.imgur.com/56MIF0q.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -1; }
 
 div.title {
   margin: auto;
   margin-top: 23px;
   width: 60%;
-  color: #323232; }
+  color: #07C4C3; }
   div.title h1 {
     margin-bottom: 0;
     text-align: center;
-    color: #323232; }
+    color: #07C4C3; }
   div.title hr {
-    border: 1px solid #323232; }
+    border: 1px solid #07C4C3; }
 
 @keyframes loading {
   0% {
@@ -122,7 +136,7 @@ div#popup {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #8373b5;
+  background-color: #07C4C3;
   border-radius: 2px;
   z-index: 1;
   border: 1px solid #FDC279;
@@ -143,7 +157,7 @@ div#popup {
     padding: 8px;
     font-size: 30px;
     background-color: #FDC279;
-    color: #8373b5; }
+    color: #07C4C3; }
   div#popup div.close {
     content: "🞩";
     display: inline-block;
@@ -156,7 +170,7 @@ div#popup {
     text-align: right;
     padding-top: 8px;
     padding-right: 8px;
-    color: #8373b5;
+    color: #07C4C3;
     cursor: pointer; }
 
 div#hidder {
@@ -191,7 +205,7 @@ table {
   table.dark tr {
     border-bottom: 1px dotted white; }
   table.dark a {
-    color: #323232; }
+    color: #07C4C3; }
   table tr:last-of-type {
     border: 0; }
   table td {
@@ -211,7 +225,7 @@ img.profile {
   width: 50px;
   height: 50px;
   background-color: #FDC279;
-  color: #8373b5;
+  color: #07C4C3;
   border-radius: 100%;
   line-height: 50px;
   text-align: center;
@@ -265,7 +279,7 @@ app-me {
       margin-bottom: 23px; }
       app-me > div.presentation nav.links a {
         display: inline-block;
-        opacity: 0.7;
+        opacity: 0.9;
         width: 50px;
         height: 50px;
         margin: 23px;
@@ -278,7 +292,7 @@ app-me {
           transform: scale(1.2, 1.2);
           opacity: 1; }
         app-me > div.presentation nav.links a.mail {
-          background-image: url("/static/img/email.png"); }
+          background-image: url("/static/img/email.svg"); }
         app-me > div.presentation nav.links a.twitter {
           background-image: url("/static/img/twitter.svg"); }
         app-me > div.presentation nav.links a.linkedin {
@@ -300,7 +314,7 @@ app-me {
     box-shadow: 0px -5px 10px 10px rgba(0, 0, 0, 0.4); }
     app-me > div.background::before {
       opacity: 0.7;
-      background: linear-gradient(#8373b5, #91425f);
+      background: linear-gradient(#07C4C3, #0489AA);
       content: "";
       display: block;
       width: 100%;
@@ -319,7 +333,7 @@ app-projectitem {
   clear: both;
   transition: 0.1s all ease;
   cursor: pointer;
-  background: linear-gradient(#8373b5, #91425f);
+  background: linear-gradient(#07C4C3, #0489AA);
   /*-webkit-border-image:
           -webkit-linear-gradient($color-back-primary, $color-back-secondary) 1 100%;
   -moz-border-image:
@@ -339,7 +353,7 @@ app-projectitem {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #8373b5; }
+    background-color: #07C4C3; }
   app-projectitem::after {
     content: "";
     position: absolute;
@@ -347,7 +361,7 @@ app-projectitem {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #91425f; }
+    background-color: #0489AA; }
   app-projectitem a {
     text-decoration: none; }
   app-projectitem:hover {
