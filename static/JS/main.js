@@ -105,7 +105,6 @@ class Router {
 Router.Instance = new Router();
 var riot = require("riot");
 var ajax = require("ajax-promise");
-require("smoothscroll-polyfill");
 require("./../../tags/Home.tag");
 require("./../../tags/Header.tag");
 require("./../../tags/Footer.tag");
@@ -196,13 +195,7 @@ class App {
         App.Page = riot.mount("div#app", tag, data);
     }
     static showPopUp(tag, title, data) {
-        if (App.PopUp != null) {
-            App.PopUp.forEach(function (t) {
-                t.unmount();
-            });
-            if (document.querySelector("div#popup") != null)
-                document.querySelector("div#popup").remove();
-        }
+        App.hidePopUp();
         var hide = document.createElement("div");
         hide.id = "hidder";
         hide.addEventListener("click", App.hidePopUp);
@@ -230,6 +223,7 @@ class App {
                 document.querySelector("div#popup").remove();
             if (document.querySelector("div#hidder") != null)
                 document.querySelector("div#hidder").remove();
+            App.PopUp = null;
         }
     }
     static showLoading() {
