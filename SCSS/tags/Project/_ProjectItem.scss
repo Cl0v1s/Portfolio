@@ -1,4 +1,4 @@
-app-projectitem
+app-projectitem, div[data-is=app-projectitem]
 {
   $height: 300px;
 
@@ -91,69 +91,7 @@ app-projectitem
     text-decoration: none;
   }
 
-  &.expand
-  {
-    width: 95%;
-    margin: auto;
-    margin-bottom: $space-big+$space-normal;
-    height: auto;
-    overflow: initial;
-
-    position: relative;
-
-
-
-    &:hover
-    {
-      transform: scale(1,1);
-    }
-
-
-
-    p.description
-    {
-      display: block;
-      text-align: center;
-    }
-
-    p.resume
-    {
-      display: none;
-    }
-
-    div.img
-    {
-      background-size: 0;
-
-      position: relative;
-      overflow: hidden;
-
-      div
-      {
-        display: inline-block;
-        opacity: 1;
-        margin: $space-normal;
-      }
-
-      &::before
-      {
-        content: "";
-        position: absolute;;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-
-        background-size: cover;
-        background-image: inherit;
-        filter: blur(15px);
-
-        z-index: -1;
-      }
-    }
-
-
-  }
+  
 
 
   h2
@@ -225,3 +163,67 @@ app-projectitem
 
 
 }
+
+app-projectitem.expand, div[data-is=app-projectitem]
+  {
+    width: 95%;
+    margin: auto;
+    margin-bottom: $space-big+$space-normal;
+    height: auto;
+    overflow: initial;
+
+    position: relative;
+
+
+
+    &:hover
+    {
+      transform: scale(1,1);
+    }
+
+
+
+    p.description
+    {
+      display: block;
+      text-align: center;
+    }
+
+    p.resume
+    {
+      display: none;
+    }
+
+    div.img
+    {
+      background-size: 0;
+
+      position: relative;
+      overflow: hidden;
+
+      div
+      {
+        display: inline-block;
+        opacity: 1;
+        margin: $space-normal;
+      }
+
+      &::before
+      {
+        content: "";
+        position: absolute;;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-size: cover;
+        background-image: inherit;
+        filter: blur(15px);
+
+        z-index: -1;
+      }
+    }
+
+
+  }

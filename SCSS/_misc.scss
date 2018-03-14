@@ -100,7 +100,7 @@ div#popup
   background-color: $color-back-primary;
   border-radius: 2px;
   z-index: 1;
-  border: 1px solid $color-front-peach;
+  border: 1px solid $color-back-secondary;
   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
   padding: $space-normal;
   padding-top: $space-big+$space-normal;
@@ -116,11 +116,11 @@ div#popup
     top: 0;
     left: 0;
     width: 100%;
-    content: attr(data-name);
+    content: "";
     font-family: $font-primary;
     padding: $space-small;
     font-size: $font-size-big;
-    background-color: $color-front-peach;
+    background-color: $color-back-secondary;
     color: $color-back-primary;
   }
 

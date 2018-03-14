@@ -105,7 +105,7 @@ class Router {
 Router.Instance = new Router();
 var riot = require("riot");
 var ajax = require("ajax-promise");
-var SmoothScroll = require("smooth-scroll");
+require("smoothscroll-polyfill");
 require("./../../tags/Home.tag");
 require("./../../tags/Header.tag");
 require("./../../tags/Footer.tag");
@@ -257,7 +257,6 @@ App.PopUp = null;
 App.LoadingCounter = 0;
 window.addEventListener("load", function () {
     Router.GetInstance().start();
-    var scroll = new SmoothScroll('a[href*="#"]');
 });
 /// <reference path="Router.ts" />
 /// <reference path="Global.ts" />

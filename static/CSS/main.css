@@ -140,7 +140,7 @@ div#popup {
   background-color: #07C4C3;
   border-radius: 2px;
   z-index: 1;
-  border: 1px solid #FDC279;
+  border: 1px solid #0489AA;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
   padding: 23px;
   padding-top: 63px;
@@ -153,11 +153,11 @@ div#popup {
     top: 0;
     left: 0;
     width: 100%;
-    content: attr(data-name);
+    content: "";
     font-family: "Raleway", sans-serif;
     padding: 8px;
     font-size: 30px;
-    background-color: #FDC279;
+    background-color: #0489AA;
     color: #07C4C3; }
   div#popup div.close {
     content: "🞩";
@@ -323,7 +323,7 @@ app-me {
       background-size: cover;
       background-position: center; }
 
-app-projectitem {
+app-projectitem, div[data-is=app-projectitem] {
   display: inline-block;
   position: relative;
   width: 320px;
@@ -347,7 +347,7 @@ app-projectitem {
   border-bottom: 0 !important;
   border-radius: 15px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); }
-  app-projectitem::before {
+  app-projectitem::before, div[data-is=app-projectitem]::before {
     content: "";
     position: absolute;
     top: 0;
@@ -355,7 +355,7 @@ app-projectitem {
     width: 100%;
     height: 3px;
     background-color: #07C4C3; }
-  app-projectitem::after {
+  app-projectitem::after, div[data-is=app-projectitem]::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -363,62 +363,29 @@ app-projectitem {
     width: 100%;
     height: 3px;
     background-color: #0489AA; }
-  app-projectitem a {
+  app-projectitem a, div[data-is=app-projectitem] a {
     text-decoration: none; }
-  app-projectitem:hover {
+  app-projectitem:hover, div[data-is=app-projectitem]:hover {
     transform: scale(1.1, 1.1); }
-  app-projectitem p.description {
+  app-projectitem p.description, div[data-is=app-projectitem] p.description {
     display: none;
     text-decoration: none; }
-  app-projectitem p.resume {
+  app-projectitem p.resume, div[data-is=app-projectitem] p.resume {
     display: block;
     min-height: 100px;
     text-decoration: none; }
-  app-projectitem.expand {
-    width: 95%;
-    margin: auto;
-    margin-bottom: 63px;
-    height: auto;
-    overflow: initial;
-    position: relative; }
-    app-projectitem.expand:hover {
-      transform: scale(1, 1); }
-    app-projectitem.expand p.description {
-      display: block;
-      text-align: center; }
-    app-projectitem.expand p.resume {
-      display: none; }
-    app-projectitem.expand div.img {
-      background-size: 0;
-      position: relative;
-      overflow: hidden; }
-      app-projectitem.expand div.img div {
-        display: inline-block;
-        opacity: 1;
-        margin: 23px; }
-      app-projectitem.expand div.img::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-image: inherit;
-        filter: blur(15px);
-        z-index: -1; }
-  app-projectitem h2 {
+  app-projectitem h2, div[data-is=app-projectitem] h2 {
     padding: 23px;
     margin-bottom: 0;
     text-decoration: none;
     line-height: 30px; }
-  app-projectitem div.img {
+  app-projectitem div.img, div[data-is=app-projectitem] div.img {
     width: 100%;
     min-height: 200px;
     background-size: cover;
     transition: 0.2s all ease;
     text-align: center; }
-    app-projectitem div.img div {
+    app-projectitem div.img div, div[data-is=app-projectitem] div.img div {
       display: none;
       opacity: 0;
       width: 200px;
@@ -427,19 +394,53 @@ app-projectitem {
       background-size: cover;
       background-position: center;
       border-radius: 2px; }
-  app-projectitem div.content {
+  app-projectitem div.content, div[data-is=app-projectitem] div.content {
     padding: 23px;
     background-size: 0;
     position: relative;
     z-index: 1; }
-    app-projectitem div.content nav a {
+    app-projectitem div.content nav a, div[data-is=app-projectitem] div.content nav a {
       text-decoration: underline; }
-    app-projectitem div.content p {
+    app-projectitem div.content p, div[data-is=app-projectitem] div.content p {
       text-align: justify;
       text-decoration: none;
       overflow: hidden;
       text-overflow: ellipsis;
       margin-bottom: 23px; }
+
+app-projectitem.expand, div[data-is=app-projectitem] {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 63px;
+  height: auto;
+  overflow: initial;
+  position: relative; }
+  app-projectitem.expand:hover, div[data-is=app-projectitem]:hover {
+    transform: scale(1, 1); }
+  app-projectitem.expand p.description, div[data-is=app-projectitem] p.description {
+    display: block;
+    text-align: center; }
+  app-projectitem.expand p.resume, div[data-is=app-projectitem] p.resume {
+    display: none; }
+  app-projectitem.expand div.img, div[data-is=app-projectitem] div.img {
+    background-size: 0;
+    position: relative;
+    overflow: hidden; }
+    app-projectitem.expand div.img div, div[data-is=app-projectitem] div.img div {
+      display: inline-block;
+      opacity: 1;
+      margin: 23px; }
+    app-projectitem.expand div.img::before, div[data-is=app-projectitem] div.img::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-image: inherit;
+      filter: blur(15px);
+      z-index: -1; }
 
 app-projects {
   display: block;

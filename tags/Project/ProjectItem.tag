@@ -1,5 +1,5 @@
 <app-projectitem>
-    <a data-scroll href="#top">
+    <a>
         <div class="{ icon : true }"></div>
         <h2>{ project.name }</h2>
         <div class="img" style="background-image: url('{ project.images[0] }');">
@@ -30,15 +30,23 @@
 
         tag.on("mount", function()
         {
-            /*tag.root.addEventListener("click", function()
+            tag.root.addEventListener("click", function()
             {
-                let parent = tag.root.parentElement;
+                /*let parent = tag.root.parentElement;
                 parent.firstChild.classList.remove("expand");
                 tag.root.remove();
                 tag.root.classList.add("expand");
                 parent.insertBefore(tag.root, parent.firstChild);
+                
+                // Scroll to a certain element
+                document.querySelector('#top').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });*/
+                App.showPopUp("app-projectitem", "Projet", {
+                    "project" : tag.project
+                });
 
-            });*/
+            });
         });
     </script>
 </app-projectitem>
