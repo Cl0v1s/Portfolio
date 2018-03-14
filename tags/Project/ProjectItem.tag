@@ -42,9 +42,12 @@
                 document.querySelector('#top').scrollIntoView({ 
                     behavior: 'smooth' 
                 });*/
-                App.showPopUp("app-projectitem", "Projet", {
-                    "project" : tag.project
-                });
+                if(App.PopUp == null)
+                {
+                    App.showPopUp("app-projectitem", "Projet", {
+                        "project" : tag.project
+                    });
+                }
 
             });
         });
