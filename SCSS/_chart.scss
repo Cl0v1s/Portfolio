@@ -1,14 +1,16 @@
 /**
  Importation des polices
 **/
-@import "./../static/fonts/Raleway-Regular";
+//@import "./../static/fonts/Raleway-Regular";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import "./../static/fonts/LobsterTwo-Regular";
 
 
 /////
 
 // Définition des polices
-$font-primary: 'Raleway', sans-serif;
+$font-primary: 'Open sans', sans-serif;
 $font-secondary: 'Lobster';
 
 $font-size-small: 14px;
