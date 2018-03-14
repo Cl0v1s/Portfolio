@@ -1,5 +1,5 @@
 <app-projectitem>
-    <a href="#top">
+    <a data-scroll href="#top">
         <div class="{ icon : true }"></div>
         <h2>{ project.name }</h2>
         <div class="img" style="background-image: url('{ project.images[0] }');">
@@ -30,7 +30,7 @@
 
         tag.on("mount", function()
         {
-            tag.root.addEventListener("click", function()
+            /*tag.root.addEventListener("click", function()
             {
                 let parent = tag.root.parentElement;
                 parent.firstChild.classList.remove("expand");
@@ -38,7 +38,7 @@
                 tag.root.classList.add("expand");
                 parent.insertBefore(tag.root, parent.firstChild);
 
-            });
+            });*/
         });
     </script>
 </app-projectitem>

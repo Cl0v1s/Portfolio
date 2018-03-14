@@ -1,7 +1,7 @@
 {
   "projects" : [
     {
-      "name" : "OIM - Gestion de contact",
+      "name" : "OIM",
       "images" : ["/static/img/OIM1.png", "/static/img/OIM2.png"],
       "description" : "Etant donné le grand nombre de contacts à gérer, l'association Osons Ici et Maintenant souhaitait la réalisation d'un logiciel de gestion de contacts, permettant une recherche facile parmi les entrées enregistrées et une grande interopérabilité avec leur système informatique existant (Excel, logiciels de mailing).",
       "link" : null,

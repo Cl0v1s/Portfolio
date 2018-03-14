@@ -18210,6 +18210,11 @@ Object.defineProperty(exports, '__esModule', { value: true });
 })));
 
 },{}],42:[function(require,module,exports){
+(function (global){
+/*! smooth-scroll v12.1.5 | (c) 2017 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */
+!(function(e,t){"function"==typeof define&&define.amd?define([],(function(){return t(e)})):"object"==typeof exports?module.exports=t(e):e.SmoothScroll=t(e)})("undefined"!=typeof global?global:"undefined"!=typeof window?window:this,(function(e){"use strict";var t="querySelector"in document&&"addEventListener"in e&&"requestAnimationFrame"in e&&"closest"in e.Element.prototype,n={ignore:"[data-scroll-ignore]",header:null,speed:500,offset:0,easing:"easeInOutCubic",customEasing:null,before:function(){},after:function(){}},o=function(){for(var e={},t=0,n=arguments.length;t<n;t++){var o=arguments[t];!(function(t){for(var n in t)t.hasOwnProperty(n)&&(e[n]=t[n])})(o)}return e},a=function(t){return parseInt(e.getComputedStyle(t).height,10)},r=function(e){"#"===e.charAt(0)&&(e=e.substr(1));for(var t,n=String(e),o=n.length,a=-1,r="",i=n.charCodeAt(0);++a<o;){if(0===(t=n.charCodeAt(a)))throw new InvalidCharacterError("Invalid character: the input contains U+0000.");t>=1&&t<=31||127==t||0===a&&t>=48&&t<=57||1===a&&t>=48&&t<=57&&45===i?r+="\\"+t.toString(16)+" ":r+=t>=128||45===t||95===t||t>=48&&t<=57||t>=65&&t<=90||t>=97&&t<=122?n.charAt(a):"\\"+n.charAt(a)}return"#"+r},i=function(e,t){var n;return"easeInQuad"===e.easing&&(n=t*t),"easeOutQuad"===e.easing&&(n=t*(2-t)),"easeInOutQuad"===e.easing&&(n=t<.5?2*t*t:(4-2*t)*t-1),"easeInCubic"===e.easing&&(n=t*t*t),"easeOutCubic"===e.easing&&(n=--t*t*t+1),"easeInOutCubic"===e.easing&&(n=t<.5?4*t*t*t:(t-1)*(2*t-2)*(2*t-2)+1),"easeInQuart"===e.easing&&(n=t*t*t*t),"easeOutQuart"===e.easing&&(n=1- --t*t*t*t),"easeInOutQuart"===e.easing&&(n=t<.5?8*t*t*t*t:1-8*--t*t*t*t),"easeInQuint"===e.easing&&(n=t*t*t*t*t),"easeOutQuint"===e.easing&&(n=1+--t*t*t*t*t),"easeInOutQuint"===e.easing&&(n=t<.5?16*t*t*t*t*t:1+16*--t*t*t*t*t),e.customEasing&&(n=e.customEasing(t)),n||t},u=function(){return Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight)},c=function(e,t,n){var o=0;if(e.offsetParent)do{o+=e.offsetTop,e=e.offsetParent}while(e);return o=Math.max(o-t-n,0)},s=function(e){return e?a(e)+e.offsetTop:0},l=function(t,n,o){o||(t.focus(),document.activeElement.id!==t.id&&(t.setAttribute("tabindex","-1"),t.focus(),t.style.outline="none"),e.scrollTo(0,n))},f=function(t){return!!("matchMedia"in e&&e.matchMedia("(prefers-reduced-motion)").matches)};return function(a,d){var m,h,g,p,v,b,y,S={};S.cancelScroll=function(){cancelAnimationFrame(y)},S.animateScroll=function(t,a,r){var f=o(m||n,r||{}),d="[object Number]"===Object.prototype.toString.call(t),h=d||!t.tagName?null:t;if(d||h){var g=e.pageYOffset;f.header&&!p&&(p=document.querySelector(f.header)),v||(v=s(p));var b,y,E,I=d?t:c(h,v,parseInt("function"==typeof f.offset?f.offset():f.offset,10)),O=I-g,A=u(),C=0,w=function(n,o){var r=e.pageYOffset;if(n==o||r==o||(g<o&&e.innerHeight+r)>=A)return S.cancelScroll(),l(t,o,d),f.after(t,a),b=null,!0},Q=function(t){b||(b=t),C+=t-b,y=C/parseInt(f.speed,10),y=y>1?1:y,E=g+O*i(f,y),e.scrollTo(0,Math.floor(E)),w(E,I)||(e.requestAnimationFrame(Q),b=t)};0===e.pageYOffset&&e.scrollTo(0,0),f.before(t,a),S.cancelScroll(),e.requestAnimationFrame(Q)}};var E=function(e){h&&(h.id=h.getAttribute("data-scroll-id"),S.animateScroll(h,g),h=null,g=null)},I=function(t){if(!f()&&0===t.button&&!t.metaKey&&!t.ctrlKey&&(g=t.target.closest(a))&&"a"===g.tagName.toLowerCase()&&!t.target.closest(m.ignore)&&g.hostname===e.location.hostname&&g.pathname===e.location.pathname&&/#/.test(g.href)){var n;try{n=r(decodeURIComponent(g.hash))}catch(e){n=r(g.hash)}if("#"===n){t.preventDefault(),h=document.body;var o=h.id?h.id:"smooth-scroll-top";return h.setAttribute("data-scroll-id",o),h.id="",void(e.location.hash.substring(1)===o?E():e.location.hash=o)}h=document.querySelector(n),h&&(h.setAttribute("data-scroll-id",h.id),h.id="",g.hash===e.location.hash&&(t.preventDefault(),E()))}},O=function(e){b||(b=setTimeout((function(){b=null,v=s(p)}),66))};return S.destroy=function(){m&&(document.removeEventListener("click",I,!1),e.removeEventListener("resize",O,!1),S.cancelScroll(),m=null,h=null,g=null,p=null,v=null,b=null,y=null)},S.init=function(a){t&&(S.destroy(),m=o(n,a||{}),p=m.header?document.querySelector(m.header):null,v=s(p),document.addEventListener("click",I,!1),e.addEventListener("hashchange",E,!1),p&&e.addEventListener("resize",O,!1))},S.init(d),S}}));
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],43:[function(require,module,exports){
 class Adapter {
     static adaptProject(project) {
         if (project.adapted)
@@ -18317,6 +18322,7 @@ class Router {
 Router.Instance = new Router();
 var riot = require("riot");
 var ajax = require("ajax-promise");
+var SmoothScroll = require("smooth-scroll");
 require("./../../tags/Home.tag");
 require("./../../tags/Header.tag");
 require("./../../tags/Footer.tag");
@@ -18468,6 +18474,7 @@ App.PopUp = null;
 App.LoadingCounter = 0;
 window.addEventListener("load", function () {
     Router.GetInstance().start();
+    var scroll = new SmoothScroll('a[href*="#"]');
 });
 /// <reference path="Router.ts" />
 /// <reference path="Global.ts" />
@@ -18477,7 +18484,7 @@ window.App = App;
 window.Adapter = Adapter;
 window.ErrorHandler = ErrorHandler;
 
-},{"./../../tags/Footer.tag":43,"./../../tags/Header.tag":44,"./../../tags/Home.tag":45,"./../../tags/Me.tag":46,"./../../tags/Project/Project.tag":47,"./../../tags/Project/ProjectItem.tag":48,"./../../tags/Project/Projects.tag":49,"ajax-promise":1,"riot":41,"riot-route":40}],43:[function(require,module,exports){
+},{"./../../tags/Footer.tag":44,"./../../tags/Header.tag":45,"./../../tags/Home.tag":46,"./../../tags/Me.tag":47,"./../../tags/Project/Project.tag":48,"./../../tags/Project/ProjectItem.tag":49,"./../../tags/Project/Projects.tag":50,"ajax-promise":1,"riot":41,"riot-route":40,"smooth-scroll":42}],44:[function(require,module,exports){
 var riot = require('riot');
 module.exports = riot.tag2('app-footer', '<a class="hopwork_widget" href="https://www.malt.fr/profile/clovisportron" data-id="592c1b44db554c30cedd8fab" data-picture="false" data-description="true" data-tags="true" data-recos="true" data-height="510" data-width="320">Voir mon profil freelance</a>', '', '', function(opts) {
         var tag = this;
@@ -18496,26 +18503,27 @@ module.exports = riot.tag2('app-footer', '<a class="hopwork_widget" href="https:
         });
 
 });
-},{"riot":41}],44:[function(require,module,exports){
+
+},{"riot":41}],45:[function(require,module,exports){
 var riot = require('riot');
 module.exports = riot.tag2('app-header', '<h1>Clovis Portron - Développeur Indépendant</h1>', '', '', function(opts) {
 });
-},{"riot":41}],45:[function(require,module,exports){
+},{"riot":41}],46:[function(require,module,exports){
 var riot = require('riot');
 module.exports = riot.tag2('app-home', '<app-me></app-me> <div class="title"> <h1>Quelques projets</h1> <hr> </div> <app-projects projects="{opts.projects}"></app-projects> <div class="title"> <h1>D\'autres informations</h1> <hr> </div> <app-footer></app-footer>', '', '', function(opts) {
 });
-},{"riot":41}],46:[function(require,module,exports){
+},{"riot":41}],47:[function(require,module,exports){
 var riot = require('riot');
 module.exports = riot.tag2('app-me', '<div class="background"></div> <div class="presentation"> <h1>Clovis Portron</h1> <span>Développeur Indépendant</span> <hr> <p> Développeur polyvalent depuis de nombreuses années, je pratique mon activité professionnelle en parallèle de mon cursus étudiant. Lors de mes relations avec mes clients je porte un grand soin à bien développer les tenants et les aboutissants de mes actions, tout en essayant d\'apporter le plus grand soin à la réalisation de leurs demandes. Amateur de développement informatique depuis une dizaine d\'années, je suis titulaire d\'un DUT informatique ainsi que d\'une Licence dans le même domaine. Je m\'oriente désormais vers des études de cognitique (Expérience utilisateur). Vous pouvez consulter mon profil Github pour avoir un aperçu de mes travaux réalisés durant mon temps libre et/ou mon cursus. </p> <nav class="links"> <a href="mailto:portron.cl@gmail.com" target="_blank" class="mail"></a> <a href="https://twitter.com/_cl0vis_" target="_blank" class="twitter"></a> <a href="https://fr.linkedin.com/in/cportron" target="_blank" class="linkedin"></a> </nav> </div>', '', '', function(opts) {
         var tag = this;
 });
-},{"riot":41}],47:[function(require,module,exports){
+},{"riot":41}],48:[function(require,module,exports){
 var riot = require('riot');
 module.exports = riot.tag2('app-project', '', '', '', function(opts) {
 });
-},{"riot":41}],48:[function(require,module,exports){
+},{"riot":41}],49:[function(require,module,exports){
 var riot = require('riot');
-module.exports = riot.tag2('app-projectitem', '<a href="#top"> <div class="{icon : true}"></div> <h2>{project.name}</h2> <div class="img" riot-style="background-image: url(\'{project.images[0]}\');"> <div each="{img in project.images}" riot-style="background-image: url(\'{img}\');"></div> </div> <div class="content"> <p class="resume"> {project.resume} </p> <p class="description"> {project.description} </p> <nav if="{project.link != null}"> <a href="{project.link}" target="_blank">Consulter le projet</a> </nav> </div> </a>', '', '', function(opts) {
+module.exports = riot.tag2('app-projectitem', '<a data-scroll href="#top"> <div class="{icon : true}"></div> <h2>{project.name}</h2> <div class="img" riot-style="background-image: url(\'{project.images[0]}\');"> <div each="{img in project.images}" riot-style="background-image: url(\'{img}\');"></div> </div> <div class="content"> <p class="resume"> {project.resume} </p> <p class="description"> {project.description} </p> <nav if="{project.link != null}"> <a href="{project.link}" target="_blank">Consulter le projet</a> </nav> </div> </a>', '', '', function(opts) {
         var tag = this;
 
         tag.project = null;
@@ -18528,18 +18536,10 @@ module.exports = riot.tag2('app-projectitem', '<a href="#top"> <div class="{icon
 
         tag.on("mount", function()
         {
-            tag.root.addEventListener("click", function()
-            {
-                let parent = tag.root.parentElement;
-                parent.firstChild.classList.remove("expand");
-                tag.root.remove();
-                tag.root.classList.add("expand");
-                parent.insertBefore(tag.root, parent.firstChild);
 
-            });
         });
 });
-},{"riot":41}],49:[function(require,module,exports){
+},{"riot":41}],50:[function(require,module,exports){
 var riot = require('riot');
 module.exports = riot.tag2('app-projects', '<app-projectitem each="{project in projects}" project="{project}"></app-projectitem>', '', 'id="top"', function(opts) {
         var tag = this;
@@ -18553,5 +18553,5 @@ module.exports = riot.tag2('app-projects', '<app-projectitem each="{project in p
                 throw new Error("Projects cant be null.");
         });
 });
-},{"riot":41}]},{},[42])(42)
+},{"riot":41}]},{},[43])(43)
 });

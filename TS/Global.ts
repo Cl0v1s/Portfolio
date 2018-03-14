@@ -1,5 +1,6 @@
 var riot = <Riot>require("riot");
 var ajax = <Ajax>require("ajax-promise");
+var SmoothScroll = <any>require("smooth-scroll");
 
 require("./../../tags/Home.tag");
 require("./../../tags/Header.tag");
@@ -202,5 +203,6 @@ class App
 window.addEventListener("load", function () {
 
     Router.GetInstance().start();
+    var scroll = new SmoothScroll('a[href*="#"]');
 
 });
